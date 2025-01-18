@@ -16,8 +16,8 @@ st.set_page_config(
 def load_model_and_scaler():
     """Load the model and scaler"""
     try:
-        model = joblib.load('sales_forecast_model.joblib')
-        scaler = joblib.load('sales_scaler.joblib')
+        model = joblib.load('forecast/sales_forecast_model.joblib')
+        scaler = joblib.load('forecast/sales_scaler.joblib')
         return model, scaler
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
