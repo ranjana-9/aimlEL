@@ -12,14 +12,12 @@ st.set_page_config(
     layout="wide"
 )
 
-# Define the path for Google Drive
-DRIVE_PATH = 'https://drive.google.com/drive/folders/1VYNdsKIRqN9T8vMREHDbUSh1DFwPWl9T?usp=drive_link'
 
 def load_model_and_scaler():
     """Load the model and scaler"""
     try:
-        model = joblib.load(os.path.join(DRIVE_PATH, 'sales_forecast_model.joblib'))
-        scaler = joblib.load(os.path.join(DRIVE_PATH, 'sales_scaler.joblib'))
+        model = joblib.load('sales_forecast_model.joblib')
+        scaler = joblib.load('sales_scaler.joblib')
         return model, scaler
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
