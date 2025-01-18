@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # Define the path for Google Drive
-DRIVE_PATH = '/content/drive/MyDrive/ForecastData'
+DRIVE_PATH = 'https://drive.google.com/drive/folders/1VYNdsKIRqN9T8vMREHDbUSh1DFwPWl9T?usp=drive_link'
 
 def load_model_and_scaler():
     """Load the model and scaler"""
